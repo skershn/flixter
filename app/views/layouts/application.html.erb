@@ -10,11 +10,44 @@
   </head>
 
   <body>
-    
-    <nav class="navbar navbar-dark bg-dark">
-      <a class="navbar-brand" href="#">flixter</a>
-    </nav>
+    <div id="flex-content-container">
+      
+      <nav class="navbar navbar-dark bg-dark">
+        <%= link_to 'flixter', root_path, class: 'navbar-brand' %>
+        <div class="status">
+          <ul class="navbar-nav">
+            <% if user_signed_in? %>
+              <li class="nav-item">
+                <%= link_to 'logout', destroy_user_session_path, method: :delete, class: 'nav-link' %>
+              </li>
+            <% else %>
+              <li class="nav-item">
+                <%= link_to 'login', new_user_session_path, class: 'nav-link' %>
+              </li>
+              <li class="nav-item">
+                <%= link_to 'sign up', new_user_registration_path, class: 'nav-link' %>
+              </li>
+            <% end %>
+          </ul>
+        </div>
 
-    <%= yield %>
+      </nav>
+
+      <% if notice.present? %>
+        <p class="alert alert-info"><%= notice %></p>
+      <% end %>
+      <% if alert.present? %>
+        <p class="alert alert-danger"><%= alert %></p>
+      <% end %>
+
+      <%= yield %>
+    </div>
+    <div id="footer">
+      <div class="container">
+        <b>Footer Here</b>
+        <br />
+        <%= link_to 'Link', '#' %>
+      </div>
+    </div>
   </body>
 </html>
