@@ -14,10 +14,10 @@
       
       <nav class="navbar navbar-dark bg-dark">
         <%= link_to 'flixter', root_url, class: 'navbar-brand' %>
+        <li class="nav-item">
+          <%= link_to 'see all courses', courses_path, class: 'nav-link' %>
+        </li>
         <div class="status">
-          <li class="nav-item">
-            <%= link_to 'See All Courses', courses_path, class: 'nav-link' %>
-          </li>
           <ul class="navbar-nav">
             <% if user_signed_in? %>
               <li class="nav-item">
