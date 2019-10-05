@@ -2,6 +2,7 @@
 <div class="box col-10 offset-1">
   <h1>Add a new course</h1>
   <%= simple_form_for @course, url: instructor_courses_path do |f| %>
+    <%= f.input :image %>
     <%= f.input :title %>
     <%= f.input :description %>
     <%= f.input :cost %>
@@ -10,3 +11,13 @@
     <br />
   <% end %>
 </div>
+
+<%# <%= simple_form_for @image, url: instructor_course_images_path(@course) do |f| %>
+<%#        <div class="modal-body">
+          <%= f.input :image %>
+<%#          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">close</button>
+            <%= f.submit "submit", type: 'submit', class: 'btn btn-info' %>
+<%#          </div>
+        </div>
+      <% end %>
