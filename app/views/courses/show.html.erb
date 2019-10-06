@@ -16,10 +16,6 @@
         <br />
         <br />
         <%= link_to 'administer', instructor_course_path(@course), class: 'btn btn-danger' %>
-        <%= simple_form_for @image, url: course_images_path(@course) do |f| %>
-          <%= f.input :picture %>
-          <%= f.submit "add a photo", class: 'btn btn-success' %>
-        <% end %>
       <% end %>
     </div>
 
