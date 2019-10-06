@@ -1,16 +1,19 @@
 <br />
 <div class="box col-10 offset-1">
+  <%= link_to 'preview as student...', course_path(current_course), class: 'btn btn-warning float-right' %>
+  <br class="clr"/>
   <h1 class="text-center"><%= current_course.title %></h1>
   <% if current_course.image.present? %>
-    <%= current_course.image.to_s, class: 'img-fluid' %>
+    <%#<%= current_course.image.to_s, class: 'img-fluid' %>
   <% end %>
-  <br />
+  
 
-  <%= link_to 'preview as student...', course_path(current_course), class: 'btn btn-warning float-right' %>
+  
   <br class="clr" />
   <div class="text-center">
     <%= link_to 'add a new section...', new_instructor_course_section_path(current_course), class: 'btn btn-success btn-lg'%>
   </div>
+  <br />
 
   <ul>
     <% current_course.sections.each do |section| %>
@@ -20,9 +23,11 @@
         <ul>
           <% section.lessons.each do |lesson| %>
             <li>
-              <b><%= lesson.title %></b>
-              -
-              <%= lesson.subtitle %>
+              <%= link_to lesson_path(lesson) do %>
+                <b><%= lesson.title %></b>
+                -
+                <%= lesson.subtitle %>
+              <% end %>
             </li>
           <% end %>
         </ul>

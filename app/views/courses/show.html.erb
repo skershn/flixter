@@ -3,7 +3,7 @@
 <div class="box col-10 offset-1">
   <h1><%= @course.title %></h1>
   <% if @course.image.present? %>
-    <%= image_tag (@course.image), class: 'img-fluid' %>
+    <%= image_tag @course.image, class: 'img-fluid' %>
   <% end %>
   <br />
   <div class="row">
@@ -25,19 +25,27 @@
   </div>
 
   <div class="col-12">
-    <% @course.sections.each do |section| %>
-      <div class="section">
-        <%= section.title %>
-        <% section.lessons.each do |lesson| %>
-          <div class="lesson">
-            <%= link_to lesson_path(lesson) do %>
-              <b><%= lesson.title %></b>
-              -
-              <%= lesson.subtitle %>
+      <ul>
+      <% @course.sections.each do |section| %>
+        <div class="section">
+            <li>
+            <h5><%= section.title %></h5>
+            <% section.lessons.each do |lesson| %>
+              <div class="lesson">
+                <ul>
+                  <li>
+                    <%= link_to lesson_path(lesson) do %>
+                      <b><%= lesson.title %></b>
+                      -
+                      <%= lesson.subtitle %>
+                  </li>
+                </ul>
+                <% end %>
+              </div>
             <% end %>
-          </div>
-        <% end %>
-      </div>
-    <% end %>
-  </div>
+          </li>
+        </div>
+      <% end %>
+    </div>
+  </ul>
 </div>

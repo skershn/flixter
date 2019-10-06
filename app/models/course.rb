@@ -8,5 +8,5 @@ class Course < ApplicationRecord
 end
 
 class Image < ActiveRecord::Base
-  mount_uploader :Image, ImageUploader
+  mount_uploader :image, ImageUploader
 end
