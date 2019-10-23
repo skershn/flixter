@@ -6,9 +6,9 @@ CarrierWave.configure do |config|
   config.aws_acl    = "public-read"
 
   config.aws_credentials = {
-      access_key_id:     ENV["AWS_ACCESS_KEY"],
-      secret_access_key: ENV["AWS_SECRET_KEY"],
-      region:            ENV["AWS_REGION"],
-      endpoint:          'https://s3.us-east-1.amazonaws.com'        
+    access_key_id:     ENV["AWS_ACCESS_KEY"],
+    secret_access_key: ENV["AWS_SECRET_KEY"],
+    region:            ENV["AWS_REGION"],
+    endpoint:          'https://s3.us-east-1.amazonaws.com'        
   }
 end
