@@ -67,10 +67,10 @@ gem 'popper_js', '~> 1.14.3'
 gem 'bootstrap', '~> 4.3.1'
 gem 'simple_form'
 gem 'devise'
-gem 'figaro'
 gem 'carrierwave', '~> 2.0'
-gem 'carrierwave-aws'
+gem 'figaro'
 gem 'fog-aws'
+gem 'carrierwave-aws', '~> 1.4.0'
 gem 'mini_magick'
 
 
