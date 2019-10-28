@@ -3,7 +3,7 @@
 <div class="box col-10 offset-1">
   <h1><%= @course.title %></h1>
   <% if @course.image.present? %>
-    <%= image_tag @course.image.to_s, class: 'img-fluid' %>
+    <%= image_tag @course.image.to_s, class: 'img-fluid center' %>
   <% end %>
   <br />
   <div class="row">
@@ -29,8 +29,9 @@
 
           <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
                   data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
-                  data-description="One month's subscription"
-                  data-amount="500"
+                  data-email="<%= current_user.email %>"
+                  data-description="<%= @course.title %> (<%= number_to_currency @course.cost %>)"
+                  data-amount="<%= (@course.cost * 100).to_i %>"
                   data-locale="auto"></script>
         <% end %>
       <% end %>
