@@ -73,6 +73,7 @@ gem 'fog-aws'
 gem 'carrierwave-aws', '~> 1.4.0'
 gem 'mini_magick'
 gem 'stripe'
+gem 'ranked-model'
 
 
 source 'https://rails-assets.org' do
