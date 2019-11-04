@@ -43,8 +43,9 @@
       <% if alert.present? %>
         <p class="alert alert-danger"><%= alert %></p>
       <% end %>
-
-      <%= yield %>
+      <div class="pgbody">
+        <%= yield %>
+      </div>
     </div>
     <div id="footer">
       <div class="container">

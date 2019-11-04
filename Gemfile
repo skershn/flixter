@@ -74,6 +74,7 @@ gem 'carrierwave-aws', '~> 1.4.0'
 gem 'mini_magick'
 gem 'stripe'
 gem 'ranked-model'
+gem 'jquery-ui-rails'
 
 
 source 'https://rails-assets.org' do

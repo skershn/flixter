@@ -1,9 +1,10 @@
 <br />
 
 <div class="box col-10 offset-1">
-  <h1><%= @course.title %></h1>
+  <h1 class="text-center"><%= @course.title %></h1>
   <% if @course.image.present? %>
     <%= image_tag @course.image.to_s, class: 'img-fluid center' %>
+    <hr />
   <% end %>
   <br />
   <div class="row">
@@ -52,9 +53,8 @@
   </div>
 
   <div class="col-12">
-      <ul>
-      <% @course.sections.each do |section| %>
-      <br /><br />
+      <ul class="sections">
+      <% @course.sections.rank(:row_order).each do |section| %>  
         <div class="section">
             <li>
             <h3><%= section.title %></h3>
