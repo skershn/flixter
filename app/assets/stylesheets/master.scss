@@ -1,14 +1,15 @@
 @import "bootstrap";
 
 .navbar {
-  font-family: "Helvetica Neue", Helvetica;
+  font-family: 'Silkscreen';
   font-weight: 200;
   box-shadow: 0px 1px 3px #2a2a2a;
   background: image_url('hotel-wallpaper-black.png');
 }
 
 .navbar-dark a.navbar-brand {
-  font-family: "Helvetica Neue", Helvetica;
+  font-family: 'Silkscreen';
+  font-size: 25px;
   font-weight: 100;
   color: white;
 }
@@ -29,13 +30,13 @@
 }
 
 .frosty h1 {
-  font-family: "Helvetica Neue", Helvetica;
-  font-weight: 100;
+  font-family: 'impact_label_reversedregular';
+  font-weight: 200;
   text-shadow: rgba(0, 0, 0, 0.95) 1px 1px;
 }
 
 .frosty h2 {
-  font-family: "Helvetica Neue", Helvetica;
+  font-family: 'impact_label_reversedregular';
   font-weight: 200;
   text-shadow: rgba(0, 0, 0, 0.95) 1px 1px;
 }
@@ -46,6 +47,8 @@ h1, h2, h3, h4, h5, h6, .navbar {
 
 .btn {
   border-radius: 5px;
+  font-family: 'impact_label_reversedregular';
+  font-size: 20px;
 }
 
 .feature {
@@ -72,6 +75,7 @@ body {
 
 .box h2, .box h1 {
   margin: 10px;
+  font-family: 'impact_labelregular';
 }
 
 .help-block {
@@ -98,6 +102,7 @@ body {
   font-family: "Helvetica Neue", Helvetica;
   font-weight: 100;
   font-size: 15px;
+  font-family: 'ubuntu-titletitle';
 }
 
 .lesson a b {
@@ -144,6 +149,7 @@ Submit my Form
   padding: 10px 15px 11px !important;
   font-size: 18px !important;
   background-color: #57d6c7;
+  font-family: 'impact_labelregular';
   font-weight: bold;
   text-shadow: 1px 1px #57D6C7;
   color: #ffffff;
@@ -171,4 +177,47 @@ ul {
   border-radius: 3px;
   padding: 20px;
   margin: 20px;
+}
+
+.para {
+  font-family: 'Bitstream Vera Sans';
+  font-size: 18px;
+}
+
+h1 h2 h3 h4 {
+  font-family: 'impact_labelregular';
+}
+
+h2 a {
+  color: #009933;
+}
+
+.nav-link {
+  color: #33cc33;
+}
+
+.mainpg h3 {
+  font-family: 'impact_labelregular';
+}
+
+p {
+  font-family: 'ubuntu-titletitle';
+}
+
+.badge {
+  font-family: 'Bitstream Vera Sans';
+  size: 25px;
+}
+
+.desc {
+  font-family: 'ubuntu-titletitle';
+  font-size: 25px;
+}
+
+.stripe-button-el {
+  font-family: 'ubuntu-titletitle';
+}
+
+.sec {
+  font-family: 'ubuntu-titletitle';
 }

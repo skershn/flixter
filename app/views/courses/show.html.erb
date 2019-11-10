@@ -34,7 +34,7 @@
               <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
                     data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
                     data-email="<%= current_user.email %>"
-                    <%# mine doesn't show the log out link? remember to resolve%>
+                    
                     data-description="<%= @course.title %> (<%= number_to_currency @course.cost %>)"
                     data-amount="<%= (@course.cost * 100).to_i %>"
                     data-label="enroll"
@@ -47,7 +47,7 @@
       <% end %>
     </div>
 
-    <div class="col-sm-8 col-12 text-center">
+    <div class="desc col-sm-8 col-12 text-center">
       <%= @course.description %>
     </div>
   </div>
@@ -57,7 +57,7 @@
       <% @course.sections.rank(:row_order).each do |section| %>  
         <div class="section">
             <li>
-            <h3><%= section.title %></h3>
+            <h3 class="sec"><%= section.title %></h3>
             <div class="row">
               <% section.lessons.rank(:row_order).each do |lesson| %>
                 <div class="col-12 col-sm-6">
